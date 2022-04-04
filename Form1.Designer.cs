@@ -34,8 +34,9 @@ namespace PROYECTO_MERCADO
             this.lbllogin = new System.Windows.Forms.Label();
             this.lblusuario = new System.Windows.Forms.Label();
             this.lblcontraseña = new System.Windows.Forms.Label();
-            this.txtcontraseña = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.btnlogin = new System.Windows.Forms.Button();
             this.pnllogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -94,21 +95,45 @@ namespace PROYECTO_MERCADO
             this.lblcontraseña.TabIndex = 3;
             this.lblcontraseña.Text = "CONTRASEÑA :";
             // 
-            // txtcontraseña
+            // txtusuario
             // 
-            this.txtcontraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txtcontraseña.Location = new System.Drawing.Point(563, 164);
-            this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.Size = new System.Drawing.Size(184, 20);
-            this.txtcontraseña.TabIndex = 4;
+            this.txtusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtusuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtusuario.Location = new System.Drawing.Point(563, 164);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(184, 26);
+            this.txtusuario.TabIndex = 4;
             // 
-            // textBox1
+            // txtpassword
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.textBox1.Location = new System.Drawing.Point(563, 238);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtpassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtpassword.Location = new System.Drawing.Point(563, 238);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
+            this.txtpassword.Size = new System.Drawing.Size(184, 26);
+            this.txtpassword.TabIndex = 5;
+            // 
+            // btnlogin
+            // 
+            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnlogin.FlatAppearance.BorderSize = 0;
+            this.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogin.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.ForeColor = System.Drawing.Color.LightGray;
+            this.btnlogin.Location = new System.Drawing.Point(394, 320);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(302, 43);
+            this.btnlogin.TabIndex = 6;
+            this.btnlogin.Text = "INGRESAR";
+            this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // frmLogin
             // 
@@ -116,8 +141,9 @@ namespace PROYECTO_MERCADO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtcontraseña);
+            this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtusuario);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.lbllogin);
@@ -139,8 +165,9 @@ namespace PROYECTO_MERCADO
         private System.Windows.Forms.Label lbllogin;
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label lblcontraseña;
-        private System.Windows.Forms.TextBox txtcontraseña;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtusuario;
+        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.Button btnlogin;
     }
 }
 
