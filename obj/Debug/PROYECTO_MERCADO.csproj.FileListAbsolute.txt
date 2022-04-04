@@ -8,3 +8,4 @@ D:\Trabajos de c#\Herramientas III\PROYECTO_MERCADO\PROYECTO_MERCADO\obj\Debug\P
 D:\Trabajos de c#\Herramientas III\PROYECTO_MERCADO\PROYECTO_MERCADO\obj\Debug\PROYECTO_MERCADO.csproj.CoreCompileInputs.cache
 D:\Trabajos de c#\Herramientas III\PROYECTO_MERCADO\PROYECTO_MERCADO\obj\Debug\PROYECTO_MERCADO.exe
 D:\Trabajos de c#\Herramientas III\PROYECTO_MERCADO\PROYECTO_MERCADO\obj\Debug\PROYECTO_MERCADO.pdb
+D:\Trabajos de c#\Herramientas III\PROYECTO_MERCADO\PROYECTO_MERCADO\obj\Debug\PROYECTO_MERCADO.Frmprincipal.resources
