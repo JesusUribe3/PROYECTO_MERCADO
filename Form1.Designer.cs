@@ -37,6 +37,7 @@ namespace PROYECTO_MERCADO
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.btnlogin = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.pnllogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -135,12 +136,30 @@ namespace PROYECTO_MERCADO
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnsalir.FlatAppearance.BorderSize = 0;
+            this.btnsalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnsalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalir.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.Color.LightGray;
+            this.btnsalir.Location = new System.Drawing.Point(394, 381);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(302, 43);
+            this.btnsalir.TabIndex = 7;
+            this.btnsalir.Text = "SALIR";
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtusuario);
@@ -168,6 +187,7 @@ namespace PROYECTO_MERCADO
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Button btnlogin;
+        private System.Windows.Forms.Button btnsalir;
     }
 }
 

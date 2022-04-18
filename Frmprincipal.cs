@@ -121,8 +121,8 @@ namespace PROYECTO_MERCADO
             }
             else 
             {
-                Mercado mer = Sistema_mercadoCD.consultar(txtcodigo.Text.Trim());
-                if (mer== null)
+                Mercado em = Sistema_mercadoCD.consultar(txtcodigo.Text.Trim());
+                if (em == null)
                 {
                     MessageBox.Show("No existe el producto con codigo"+txtcodigo.Text);
                     limpiarcampos();
@@ -130,13 +130,13 @@ namespace PROYECTO_MERCADO
                 }
                 else
                 {
-                    txtcodigo.Text = mer.Codigo ;
-                    txtproducto.Text = mer.Nombre_producto;
-                    txtmarca.Text = mer.Marca;
-                    txtcantidad.Text = mer.Cantidad.ToString();
-                    txtprecio.Text = mer.Precio.ToString();
-                    txttienda.Text = mer.Tienda;
-                    datefecha.Text = mer.Fecha_date ;
+                    txtcodigo.Text = em.Codigo ;
+                    txtproducto.Text = em.Nombre_producto;
+                    txtmarca.Text = em.Marca;
+                    txtcantidad.Text = em.Cantidad.ToString();
+                    txtprecio.Text = em.Precio.ToString();
+                    txttienda.Text = em.Tienda;
+                    datefecha.Text = em.Fecha_date ;
                     consultado = true;
                 }
             }
@@ -144,12 +144,12 @@ namespace PROYECTO_MERCADO
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            
-                int cantidad = 0;
-                float precio = 0;
+
+            int cantidad = 0;
+            float precio = 0;
             if (consultado == false)
             {
-                MessageBox.Show("Debe consultar el producto");
+                MessageBox.Show("Debe consultar un producto");
 
             }
             else if (txtcodigo.Text.Trim() == "")
@@ -167,15 +167,15 @@ namespace PROYECTO_MERCADO
                 }
 
 
-                else if (!int.TryParse(txtcantidad.Text, out cantidad) && (txtcantidad.Text == ""))
-                {
-                    MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
-                }
-                else if (!float.TryParse(txtprecio.Text, out precio) && (txtprecio.Text == ""))
-                {
-                    MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
-                }
-                else if (txttienda.Text.Trim() == "")
+            else if (!int.TryParse(txtcantidad.Text, out cantidad) && (txtcantidad.Text == ""))
+            {
+                MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
+            }
+            else if (!float.TryParse(txtprecio.Text, out precio) && (txtprecio.Text == ""))
+            {
+                MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
+            }
+            else if (txttienda.Text.Trim() == "")
                 {
                     MessageBox.Show("Debe ingresar una tienda");
                 }
@@ -196,7 +196,7 @@ namespace PROYECTO_MERCADO
                         {
                             llenarGrid();
                             limpiarcampos();
-                            MessageBox.Show("Producto editar correctamente");
+                            MessageBox.Show("Producto editado correctamente");
                             consultado = false;
                         }
                         else
@@ -214,36 +214,36 @@ namespace PROYECTO_MERCADO
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            int cantidad = 0;
-            float precio = 0;
+            //int cantidad = 0;
+            //float precio = 0;
             if (consultado == false)
             {
                 MessageBox.Show("Debe consultar el producto");
 
             }
-            else if (txtcodigo.Text.Trim() == "")
-            {
-                MessageBox.Show("Debe ingresar un codigo");
+            //else if (txtcodigo.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("Debe ingresar un codigo");
 
-            }
-            else if (txtproducto.Text.Trim() == "")
-            {
-                MessageBox.Show("Debe ingresar un producto");
-            }
-            else if (txtmarca.Text.Trim() == "")
-            {
-                MessageBox.Show("Debe ingresar una marca");
-            }
+            //}
+            //else if (txtproducto.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("Debe ingresar un producto");
+            //}
+            //else if (txtmarca.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("Debe ingresar una marca");
+            //}
 
 
-            else if (!int.TryParse(txtcantidad.Text, out cantidad) && (txtcantidad.Text == ""))
-            {
-                MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
-            }
-            else if (!float.TryParse(txtprecio.Text, out precio) && (txtprecio.Text == ""))
-            {
-                MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
-            }
+            //else if (!int.TryParse(txtcantidad.Text, out cantidad) && (txtcantidad.Text == ""))
+            //{
+            //    MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
+            //}
+            //else if (!float.TryParse(txtprecio.Text, out precio) && (txtprecio.Text == ""))
+            //{
+            //    MessageBox.Show("Debe ingresar un valor numerico o campo vacio");
+            //}
             else if (DialogResult.Yes == MessageBox.Show(null,"¿Realmente desea eliminar el producto?","Confirmación", MessageBoxButtons.YesNo))
             {
                 
@@ -268,6 +268,13 @@ namespace PROYECTO_MERCADO
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin login = new frmLogin();
+            login.Show();
         }
     }
 }

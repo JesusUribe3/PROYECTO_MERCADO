@@ -244,6 +244,7 @@ namespace PROYECTO_MERCADO
             this.btnsalir.TabIndex = 20;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // btnconsultar
             // 

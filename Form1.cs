@@ -29,19 +29,31 @@ namespace PROYECTO_MERCADO
             SqlDataReader lector = comando.ExecuteReader();
             if (lector.Read())
             {
-                //conexion.Close();
+                
+                
                 Frmprincipal pantalla = new Frmprincipal();
+                this.Hide();
                 pantalla.Show();
                 MessageBox.Show("Bienvenido");
+                
+               
             }
             
-                
+
+
+
             else if (txtusuario.Text == "" || txtpassword.Text == "")
             {
                 MessageBox.Show("No se aceptan campos vacios");
             }
             else
                 MessageBox.Show("Usuario o contraseña incorrectas", "valide de nuevo");
+            conexion.Close();
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

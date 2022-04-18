@@ -39,7 +39,7 @@ namespace PROYECTO_MERCADO.Datos
             try
             {
                 Conexion con = new Conexion();
-                string sql = "UPDATE tb_sistem_mercado SET codigo =  '" + e.Codigo + "', nombre_product = '" + e.Nombre_producto + "', marca = '" + e.Marca + "',cantidad = " + e.Cantidad + ", precio = " + e.Precio + ", tienda = '" + e.Tienda + "', fecha = '" + e.Fecha_date + "'WHERE codigo ='"+e.Codigo + "'";
+                string sql = "UPDATE tb_sistem_mercado SET  nombre_producto = '" + e.Nombre_producto + "', marca = '" + e.Marca + "',cantidad = " + e.Cantidad + ", precio = " + e.Precio + ", tienda = '" + e.Tienda + "', fecha = '" + e.Fecha_date + "' WHERE codigo ='"+ e.Codigo + "'";
                 SqlCommand comando = new SqlCommand(sql, con.conectar());
                 int cantidad = comando.ExecuteNonQuery();
                 if (cantidad == 1)
@@ -54,10 +54,6 @@ namespace PROYECTO_MERCADO.Datos
                     return false;
                 }
                     
-
-                
-
-                return true;
             }
             catch (Exception ex)
             {
@@ -70,7 +66,7 @@ namespace PROYECTO_MERCADO.Datos
             try
             {
                 Conexion con = new Conexion();
-                string sql = "DELETE tb_sistem_mercado WHERE codigo ='" + codigo+ "'";
+                string sql = "DELETE FROM tb_sistem_mercado WHERE codigo ='" + codigo+ "'";
                 SqlCommand comando = new SqlCommand(sql, con.conectar());
                 int cantidad = comando.ExecuteNonQuery();
                 if (cantidad == 1)
@@ -88,7 +84,7 @@ namespace PROYECTO_MERCADO.Datos
 
 
 
-                return true;
+                //return true;
             }
             catch (Exception ex)
             {
@@ -101,7 +97,7 @@ namespace PROYECTO_MERCADO.Datos
             try
             {
                 Conexion con = new Conexion();
-                string sql = "SELEC * FROM tb_sistem_mercado";
+                string sql = "SELECT * FROM tb_sistem_mercado";
                 SqlCommand comando = new SqlCommand(sql, con.conectar());
                 SqlDataReader dr = comando.ExecuteReader(CommandBehavior.CloseConnection);
                 DataTable dt = new DataTable();
@@ -123,7 +119,7 @@ namespace PROYECTO_MERCADO.Datos
             try
             {
                 Conexion con = new Conexion();
-                string sql = "SELEC * FROM tb_sistem_mercado WHERE codigo = '"+codigo+"'";
+                string sql = "SELECT * FROM tb_sistem_mercado WHERE codigo = '"+codigo+"'";
                 SqlCommand comando = new SqlCommand(sql, con.conectar());
                 SqlDataReader dr = comando.ExecuteReader();
                 Mercado em = new Mercado();
